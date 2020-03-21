@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigatio bar animation</title>
+	<link rel="stylesheet" type="text/css" href="navanimation.css">
+  <script src="https://kit.fontawesome.com/9743c13cfa.js"></script>
+</head>
+<body onload="myfunction()">
+    <div id="load1">
+	<div id="load">
+  <hr/><hr/><hr/><hr/>
+    
+</div>
+   <br>
+    <p>"It is our choices, Harry, that show what we truly are, far more than our abilities.”<br>&nbsp;&nbsp; — Albus Dumbledore, Harry Potter and the Chamber of Secrets</p>
+    </div>
+	<header>
+		<div id="name">
+			<h1>Books & Coffee</h1>
+		</div>
+		<div id="social-media">
+            <a href="https://twitter.com/login?lang=en" class="item2">
+            <i class="fab fa-twitter fa-1x"></i>
+            </a>
+            <a href="https://instagram.com" class="item3">
+            <i class="fab fa-instagram fa-1x"></i>
+            </a>
+            <a href="https://facebook.com" class="item4">
+            <i class="fab fa-facebook fa-1x"></i>
+            </a>
+		</div>
+	</header>
+	
+    <div class="container circleBehind">
+        <a href="/cgi-bin/categories.py" onclick="loading()">Categories</a>
+		<a href="/cgi-bin/newlyadded.py" onclick="loading()">Newly added</a>
+		<a href="/cgi-bin/bestseller.py" onclick="loading()">Best sellers</a>
+		<a href="sellingpage.html" onclick="loading()">Sell</a>
+		<a href="/cgi-bin/blog1.py" onclick="loading()">Blog</a>
+        <a href="aboutus1.html">About Us</a>
+
+       
+    </div>   
+	
+    <br><br>
+<div id="loginform1">
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome back!</h2>
+    <form action="/cgi-bin/book-page.py" method="get">
+    <label>
+      <span>Email</span>
+      <input type="text" name="username" />
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" name="password" />
+  </form>
+    <a href="/cgi-bin/forgotpass.py">Forgot password?</a>
+    <button type="submit" class="submit">Sign In</button>
+    <button type="button" class="fb-btn">Connect with <span>Google</span></button>
+    </label>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great<br> amount of new genres!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already have an account,<br> just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      <h2>Time to feel like home,</h2>
+      <form action="/cgi-bin/register.py" method="get">
+      <label>
+        <span>Name</span>
+        <input type="text" name="namee"/>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email"/>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="pwd"/>
+      </label>
+      <button type="submit" class="submit">Sign Up</button>
+       </form>
+      
+      <button type="button" class="fb-btn">Join with <span>Google</span></button>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  document.querySelector('.img__btn').addEventListener('click', function() {
+  document.querySelector('.cont').classList.toggle('s--signup');
+});
+</script>
+<script type="text/javascript">
+    
+	function myfunction(){
+    
+		document.getElementById('load1').style.display="none";
+		
+	}
+    function loading(){
+    
+		document.getElementById('load1').style.display="block";
+		
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="blog-page.css">
+  <script src="https://kit.fontawesome.com/9743c13cfa.js"></script>
+  <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section 
+  {
+   display: block; 
+ }
+</style>
+  <style>
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+}
+.leftcolumn2 {   
+  float: right;
+  width: 75%;
+  box-sizing: border-box;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.rightcolumn2
+{
+	float:left;
+	width: 23%;
+
+  	box-sizing: border-box;
+}
+
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 5px;
+   margin-bottom: 10px;
+   height: 420px;
+   justify-content: center;
+   box-sizing: border-box;
+   
+}
+.card2 {
+   background-color: #99ccff;
+   padding: 20px;
+   margin-top: 20px;
+   justify-content: center;
+   box-sizing: border-box;
+   float:center;
+   position: relative;
+   
+}
+.card3 {
+   background-color: #99ccff;
+   padding: 20px;
+   margin-top: 20px;
+   justify-content: center;
+   box-sizing: border-box;
+   float:center;
+   position: relative;
+   
+}
+.newclass
+{
+
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+
+.description
+{
+  position:relative;
+  display: inline;
+  box-sizing: border-box;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn 
+  {   
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #blah
+  {
+    float: right;
+  }
+  
+  img
+  {
+    bottom: 50px;
+    float: right;
+    position: relative;
+    display: inline;
+    height: 200px;
+    width: 200px;
+    margin:0px 15px 0px 0px;
+    box-sizing: border-box;
+  }
+  .c1
+  {
+    align-content: right;
+  }
+  .tid
+  {
+    align-content: center;
+    align-self: center;
+    align-items: center;
+  }
+  .flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 200px;
+
+  display: flex;
+}
+.center { align-self: center; }
+}
+</style>
+</head>
+<body onload="myfunction()">
+    <div id="load1">
+	<div id="load">
+  <hr/><hr/><hr/><hr/>
+    
+</div>
+   <br>
+    <p>"It is our choices, Harry, that show what we truly are, far more than our abilities.”<br>&nbsp;&nbsp; — Albus Dumbledore, Harry Potter and the Chamber of Secrets</p>
+    </div>
+	<header>
+		<div id="name">
+			<h1>Books & Coffee</h1>
+		</div>
+		<div id="social-media">
+            <a href="https://twitter.com/login?lang=en" class="item2">
+            <i class="fab fa-twitter fa-1x"></i>
+            </a>
+            <a href="https://instagram.com" class="item3">
+            <i class="fab fa-instagram fa-1x"></i>
+            </a>
+            <a href="https://facebook.com" class="item4">
+            <i class="fab fa-facebook fa-1x"></i>
+            </a>
+		</div>
+	</header>
+	
+    <div class="container circleBehind">
+       <a href="/cgi-bin/categories.py" onclick="loading()">Categories</a>
+    <a href="/cgi-bin/newlyadded.py" onclick="loading()">Newly added</a>
+    <a href="/cgi-bin/bestseller.py" onclick="loading()">Best sellers</a>
+    <a href="sellingpage.html" onclick="loading()">Sell</a>
+    <a href="/cgi-bin/blog1.py" onclick="loading()">Blog</a>
+        <a href="aboutus1.html">About Us</a>
+       
+    </div>  
+    <br><br>
+    <div class="bgimg"></div>
+    <form action="/cgi-bin/sell-page.py" method="get">
+<div class="card">
+  <div class="card2">
+<center> 
+<input type='file' onchange="readURL(this);" />
+<img id="blah" src="https://cdn2.iconfinder.com/data/icons/design-71/32/Design_design_cursor_pointer_arrow_mouse-512.png" alt="your image" height="100" width="100" />
+</center>
+</div>
+
+<div class="card2">
+<center><p style="font-family: Roboto Mono, monospace;">Please enter the price at which you wish to sell your book.</h4>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id = "tid" name="price" maxlength="10" size="10">
+<br><br><br>
+</center>
+</div>
+<div class="card3">
+<center>
+<p style="font-family: Roboto Mono, monospace;">Please enter the name of the image file that you have uploaded.</h4>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id = "tid" name="imgname" maxlength="10" size="10">
+<br><br><br>
+</center>
+</div><div class="card3">
+<center>
+
+<input type="submit" style="font-family: Roboto Mono, monospace;" value="Click here to sell your book!"><br><br>
+</center>
+</div>
+
+
+
+</div>
+<center>
+</center>
+</form>
+
+<script type="text/javascript">
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) 
+            {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+
+            };
+
+            reader.readAsDataURL(input.files[0]);
+            document.write(reader.readAsDataURL(input.files[0]))
+        }
+
+    }
+
+</script>
+
+
+<script type="text/javascript">
+  document.querySelector('.img__btn').addEventListener('click', function() {
+  document.querySelector('.cont').classList.toggle('s--signup');
+});
+</script>
+<script type="text/javascript">
+    
+	function myfunction(){
+    
+		document.getElementById('load1').style.display="none";
+		
+	}
+    function loading(){
+    
+		document.getElementById('load1').style.display="block";
+		
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+html, body
+{
+    margin: 0px;
+    background: #ededed;
+}
+.item2{
+  margin-right: 0px;
+  padding-right: 0px;
+
+}
+.item4{
+  margin-left: 0px;
+  padding-left: 0px;
+  
+}
+#load1
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 222;
+    background: #fff;
+}
+#load{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+    
+    
+}
+#load hr{border:0;margin:0;width:40%;height:40%;position:fixed;border-radius:50%;animation:spin 2s ease infinite}
+
+#load :first-child{background:lightpink;animation-delay:-1.5s}
+#load :nth-child(2){background:#555;animation-delay:-1s}
+#load :nth-child(3){background:lightpink;animation-delay:-0.5s}
+#load :last-child{background:#555}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+#preloader
+{
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff url('Flickr-1.2s-192px.gif') no-repeat center;
+    z-index: 9999;
+    
+}
+#load1 p
+{
+    position: fixed;
+   font-family: cursive;
+    font-size: 16px;
+    bottom: 30%;
+    left:30%;
+        
+}
+header, footer
+{
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 30px ;
+    background-color: #555;
+}
+
+header h1
+{
+    display: inline;
+    position: relative;
+    float: left;
+    bottom: 60px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 40px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+color: aliceblue;
+}
+header a
+{
+    
+    color: aliceblue;
+    text-decoration: none;
+    font: 20px serif;
+    margin: 0px 10px;
+    padding: 10px 10px 10px 10px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+#social-media
+{
+    position: relative;
+    display: inline;
+    bottom: 10px;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+div.container
+{
+    display: block;
+    margin:0;
+    font-family: serif;
+    padding:  10px 130px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px -7px #000;
+    text-align: left;
+    background-color: lightpink;
+}
+
+div.container a
+{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font: 20px serif;
+    margin: 0px;
+    padding: 10px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left:50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 70%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 1px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}

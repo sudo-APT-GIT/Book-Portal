@@ -1,0 +1,389 @@
+html, body
+{
+    margin: 0px;
+    background: #ededed;
+}
+.item2{
+  margin-right: 0px;
+  padding-right: 0px;
+
+}
+.item4{
+  margin-left: 0px;
+  padding-left: 0px;
+  
+}
+#load1
+{
+     position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 222;
+    background: #fff;
+}
+#load{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+    
+    
+}
+#load hr{border:0;margin:0;width:40%;height:40%;position:fixed;border-radius:50%;animation:spin 2s ease infinite}
+
+#load :first-child{background:lightpink;animation-delay:-1.5s}
+#load :nth-child(2){background:#555;animation-delay:-1s}
+#load :nth-child(3){background:lightpink;animation-delay:-0.5s}
+#load :last-child{background:#555}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+#preloader
+{
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff url('Flickr-1.2s-192px.gif') no-repeat center;
+    z-index: 9999;
+    
+}
+#load1 p
+{
+    position: fixed;
+   font-family: cursive;
+    font-size: 16px;
+    bottom: 30%;
+    left:30%;
+        
+}
+header, footer
+{
+    font-family: sans-serif;
+    margin: 0 auto;
+	padding: 50px ;
+    background-color: #555;
+}
+
+header h1
+{
+    display: inline;
+    position: relative;
+    float: left;
+    bottom: 60px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 40px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+color: aliceblue;
+}
+header a
+{
+    
+    color: aliceblue;
+    text-decoration: none;
+    font: 20px serif;
+    margin: 0px 10px;
+    padding: 10px 10px 10px 10px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+#social-media
+{
+    position: relative;
+    display: inline;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+div.container
+{
+    display: block;
+    margin:0;
+    font-family: serif;
+	padding:  30px 130px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px -7px #000;
+    text-align: left;
+    background-color: lightpink;
+}
+
+div.container a
+{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font: 20px serif;
+    margin: 0px;
+    padding: 10px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left:50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 70%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 1px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+#loginform1, #loginform1:before, #loginform1:after {
+
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.tip {
+  font-size: 20px;
+  margin: 40px auto 50px;
+  text-align: center;
+}
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: beige;
+     box-sizing: border-box;
+    box-shadow: 2px 1px 10px -7px #000;
+}
+.form {
+  position: relative;
+  width: 640px;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+  padding: 50px 30px 0;
+    color: black;
+}
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: beige;
+  transition: transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  transform: translate3d(-640px, 0, 0);
+}
+button {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 38px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+   background-image: url(img/photo-1507842217343-583bb7270b66.jpg);
+}
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url(img/photo-1507842217343-583bb7270b66.jpg);
+  background-size: cover;
+  transition: transform 1.2s ease-in-out;
+}
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+   background-image: url(img/photo-1507842217343-583bb7270b66.jpg);
+}
+.cont.s--signup .img:before {
+  transform: translate3d(640px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+.img__text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+  transform: translateX(520px);
+}
+.img__text.m--in {
+  transform: translateX(-520px);
+}
+.cont.s--signup .img__text.m--in {
+  transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 39px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+}
+.img__btn span.m--in {
+  transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+  transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  transform: translateY(72px);
+}
+h2 {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 15px;
+  color: black;
+  text-transform: uppercase;
+}
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+}
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: grey;
+  text-transform: uppercase;
+}
+.fb-btn {
+  border: 2px solid #d3daef;
+  color: #455a81;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: #455a81;
+}
+.sign-in {
+  transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  transform: translate3d(640px, 0, 0);
+}
+.sign-up {
+  transform: translate3d(-900px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  transform: translate3d(0, 0, 0);
+}
